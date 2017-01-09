@@ -2,6 +2,7 @@ function A = warmUpExercise()
 %WARMUPEXERCISE Example function in octave
 %   A = WARMUPEXERCISE() is an example function that returns the 5x5 identity matrix
 
+% Add a test comment to test check-in
 A = eye(5);
 % ============= YOUR CODE HERE ==============
 % Instructions: Return the 5x5 identity matrix 
