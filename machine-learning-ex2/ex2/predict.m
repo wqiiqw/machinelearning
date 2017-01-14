@@ -15,11 +15,14 @@ p = zeros(m, 1);
 %               You should set p to a vector of 0's and 1's
 %
 
+% Wang Qi's code start here
 
-
-
-
-
+for i=1:m
+  if (sigmoid(X(i, :)*theta)>=0.5)
+    p(i) = 1;
+  endif
+endfor
+% Wang Qi's code end here
 
 % =========================================================================
 
