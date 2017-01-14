@@ -19,13 +19,15 @@ grad = zeros(size(theta));
 
 % Wang Qi updated @ 2017/01/14
 
+% Compute the Cost
 tmp_sum = 0.0;
 for i=1:m
   h_theta = sigmoid(X(i, :) * theta);
   tmp_sum += -y(i)*log(h_theta) - (1 - y(i))*log(1-h_theta);
 endfor
-J = tmp_sum/m + lambda/(2 * m) * sum(power(theta, 2));
+J = tmp_sum/m + lambda/(2 * m) * sum(power(theta(2:end), 2));
 
+% Compute the gradient
 n = length(theta);
 for j=1:n
   tmp_sum = 0.0;
