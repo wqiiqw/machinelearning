@@ -18,7 +18,7 @@ grad = zeros(size(theta));
 %               derivatives of the cost w.r.t. each parameter in theta
 
 % Wang Qi updated @ 2017/01/14
-
+%
 % Compute the Cost
 tmp_sum = 0.0;
 for i=1:m
