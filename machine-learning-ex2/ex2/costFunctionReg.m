@@ -25,6 +25,11 @@ for i=1:m
   h_theta = sigmoid(X(i, :) * theta);
   tmp_sum += -y(i)*log(h_theta) - (1 - y(i))*log(1-h_theta);
 endfor
+
+% below "2:end" *In the Ex2.pdf note, Page 9, the doc mentioned that: "Note that 
+% you should not regularize the parameter theta0. In Octave/MATLAB, recall that 
+% the index starts from 1, hence, you should not be regularizing the theta1 
+% parameter (which corresponds to theta0) in the code. so the change is done.
 J = tmp_sum/m + lambda/(2 * m) * sum(power(theta(2:end), 2));
 
 % Compute the gradient
