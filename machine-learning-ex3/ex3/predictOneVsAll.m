@@ -37,20 +37,7 @@ X = [ones(m, 1) X];
 %       for each row.
 %       
 
-
-val = sigmoid(X * all_theta');
-%val(1, :)
-%y(1)
-%val(2, :)
-%y(1)
-%[t1, t2] = max(val(1, :))
-%[t1, t2] = max(val(2, :))
-%sigmoid(val(1,:))
-%sigmoid(val(2,:))
-%size(val) = 5000, 10
-
-
-[t1, p] = max(val, [], 2);
+[t1, p] = max(sigmoid(X * all_theta'), [], 2);
 
 
 %p;
