@@ -16,7 +16,13 @@ X_poly = zeros(numel(X), p);
 % 
 
 
-
+for i = 1:p,
+  if i == 1,
+    X_poly = X;
+  else,
+    X_poly = [X_poly X.^i];
+  endif
+end  
 
 
 
